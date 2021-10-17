@@ -1,0 +1,21 @@
+---
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~'] 
+
+- link:
+    ~/.emacs.d/:
+        path: emacs.d/*
+        glob: true
+        create: true
+    ~/.emacs.d/:
+        path: emacs.d/.*
+        glob: true
+
+- create:
+    - ~/.emacs.d
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
