@@ -29,4 +29,5 @@
     - ~/.emacs.d
 
 - shell:
+    - [git submodule update --init --remote]
     - [git submodule update --init --recursive, Installing submodules]
