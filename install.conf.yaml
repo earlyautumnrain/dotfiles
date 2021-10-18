@@ -3,9 +3,19 @@
     link:
         relink: true
 
-- clean: ['~'] 
+- clean: ['~']
 
 - link:
+    # Terminal
+    ~/.shell:
+      path: shell
+      create: true
+    ~/.zshrc:
+      path: config/zshrc
+      force: true
+    ~/.shell_env: config/shell_env
+    ~/.zplugrc: config/zplugrc
+    # Editors
     ~/.emacs.d/:
         path: emacs.d/*
         glob: true
@@ -13,6 +23,7 @@
     ~/.emacs.d/:
         path: emacs.d/.*
         glob: true
+    ~/.editorconfig: config/editorconfig
 
 - create:
     - ~/.emacs.d
