@@ -23,4 +23,4 @@
 - shell:
     - [git submodule sync --quiet --recursive]
     - [git submodule update --init --recursive]
-    - [cp -fR emacs.d/* ~/.emacs.d]
+    - [git submodule update --remote]
