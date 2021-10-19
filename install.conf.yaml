@@ -15,19 +15,12 @@
       force: true
     ~/.shell_env: config/shell_env
     ~/.zplugrc: config/zplugrc
-    # Editors
-    ~/.emacs.d/:
-        path: emacs.d/*
-        glob: true
-        create: true
-    ~/.emacs.d/:
-        path: emacs.d/.*
-        glob: true
     ~/.editorconfig: config/editorconfig
 
 - create:
     - ~/.emacs.d
 
 - shell:
-    - [git submodule update --init --remote]
-    - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule sync --quiet --recursive]
+    - [git submodule update --init --recursive]
+    - [cp -fR emacs.d/* ~/.emacs.d]
