@@ -1,0 +1,15 @@
+---
+
+# Setting up vscode:
+- link:
+    # macos:
+    "~/Library/Application Support/Code/User/settings.json":
+      if: '[ `uname` = Darwin ]'
+      path: vscode/settings.json
+      create: true
+
+- shell:
+    - command: bash -l './vscode/install.sh'
+      description: Installing vscode extensions
+      stdout: true
+      stderr: true

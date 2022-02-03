@@ -1,12 +1,8 @@
 ---
-- defaults:
-    link:
-        relink: true
 
 - clean: ['~']
 
 - link:
-    # Terminal
     ~/.shell:
       path: shell
       create: true
@@ -17,10 +13,8 @@
     ~/.zplugrc: config/zplugrc
     ~/.editorconfig: config/editorconfig
 
-- create:
-    - ~/.emacs.d
-
-- shell:
-    - [git submodule sync --quiet --recursive]
-    - [git submodule update --init --recursive]
-    - [git submodule update --remote]
+    # SSH:
+    ~/.ssh/config:
+      path: config/ssh_config
+      force: true
+      create: true
