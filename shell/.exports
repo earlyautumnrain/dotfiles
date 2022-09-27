@@ -63,7 +63,8 @@ export MANPAGER='less'
 
 # pyenv:
 eval "$(pyenv init --path)"
-export WORKON_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # === Code highlight ===
 # https://github.com/zsh-users/zsh-syntax-highlighting
