@@ -22,7 +22,7 @@
   "editor.occurrencesHighlight": false,
   "editor.overviewRulerBorder": false,
   "editor.rulers": [
-    80
+    80, 120
   ],
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "none",
@@ -130,5 +130,7 @@
   "workbench.preferredLightColorTheme": "Ayu Light",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.guides.indentation": false,
+  "git.suggestSmartCommit": false,
   "window.autoDetectColorScheme": true,
+  "go.toolsManagement.autoUpdate": true,
 }

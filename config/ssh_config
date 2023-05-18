@@ -1,4 +1,4 @@
-Host factory5.ai
+Host factory5
     UseKeychain yes
     AddKeysToAgent yes
     HostName gitlab.factory5.ai

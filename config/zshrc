@@ -38,7 +38,12 @@ source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.shell_env"
 source "$(brew --prefix)/opt/autoenv/activate.sh"
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# gradle
+export PATH="/usr/local/opt/gradle@7/bin:$PATH"
 
 autoload -Uz compinit && compinit
 source <(kubectl completion zsh)
