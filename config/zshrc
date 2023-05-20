@@ -33,17 +33,18 @@ plugins=(
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Custom envs:
-source "$ZSH/oh-my-zsh.sh"
-source "$HOME/.shell_env"
 source "$(brew --prefix)/opt/autoenv/activate.sh"
 
-# jenv
+# # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-# gradle
+# # gradle
 export PATH="/usr/local/opt/gradle@7/bin:$PATH"
 
 autoload -Uz compinit && compinit
 source <(kubectl completion zsh)
+
+# # Custom envs:
+source "$ZSH/oh-my-zsh.sh"
+source "$HOME/.shell_env"
